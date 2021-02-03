@@ -7,8 +7,8 @@ public enum ItemType
     Coin,
     Equipment,
     Heal,
-    Weapon,
-    Ammo
+    Pistol,
+    PistolAmmo
 }
 
 public enum ItemSubType
@@ -20,7 +20,6 @@ public abstract class ItemObject : ScriptableObject
     public int Id;
     public Sprite uiDisplay;
     public ItemType type;
-    public ItemSubType subType;
     [TextArea(15,20)]
     public string description;
 }

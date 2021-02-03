@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30049ad74c6bbdd45b9cdfb60b45d027, type: 3}
   m_Name: Coin
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1825138707039879429, guid: 04cf7f951bbabf748ab92b99a3d95585, type: 3}
+  Id: 0
+  uiDisplay: {fileID: 21300000, guid: fefabf67b4b0a6249ae6d28b25424c89, type: 3}
   type: 0
+  subType: 0
   description: It's a coin what you can find in everywhere, and you can buy for some
     good items with these

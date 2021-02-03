@@ -872,10 +872,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MenuButtons: {fileID: 1136955338}
-  Inventory: {fileID: 0}
+  Inventory: {fileID: 11400000, guid: 9ff6fced0f3b19b4aa1ecc185d1156ef, type: 2}
   LookInventory: {fileID: 2065050200}
   Menu: {fileID: 1136955340}
-  Inventory_anim: {fileID: 0}
+  Inventory_anim: {fileID: 2065050202}
   MenuMain: {fileID: 1136955338}
   InventoryMenu: {fileID: 2065050200}
 --- !u!4 &1211534461
@@ -1160,6 +1160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d425abb6cbc9c0145841abb0c3db83ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InventoryPrefab: {fileID: 0}
   inventory: {fileID: 11400000, guid: 9ff6fced0f3b19b4aa1ecc185d1156ef, type: 2}
   X_START: -140
   Y_START: 120

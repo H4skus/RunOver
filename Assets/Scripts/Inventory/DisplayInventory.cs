@@ -15,7 +15,7 @@ public class DisplayInventory : MonoBehaviour
     public int Y_SPACE_BEETWEM_ITEM;
     Dictionary<InventorySlot, GameObject> itemsDisplayed = new Dictionary<InventorySlot, GameObject>();
     // Start is called before the first frame update
-    /*
+    
     void Start()
     {
         CreatDisplay();
@@ -29,30 +29,34 @@ public class DisplayInventory : MonoBehaviour
 
     public void CreatDisplay()
     {
-        for (int i = 0; i < inventory.Container.Count; i++)
+        for (int i = 0; i < inventory.Container.Items.Count; i++)
         {
+            InventorySlot slot = inventory.Container.Items[i];
+
             var obj = Instantiate(InventoryPrefab, Vector3.zero, Quaternion.identity, transform);
-            obj.transform.GetChild(0).GetComponentInChildren<Image>().sprite = 
+            obj.transform.GetChild(0).GetComponentInChildren<Image>().sprite = inventory.database.GetItem[slot.item.Id].uiDisplay;
             obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
-            obj.GetComponentInChildren<TextMeshProUGUI>().text = inventory.Container[i].amount.ToString("n0");
-            itemsDisplayed.Add(inventory.Container[i], obj);
+            obj.GetComponentInChildren<TextMeshProUGUI>().text = slot.amount.ToString("n0");
+            itemsDisplayed.Add(slot, obj);
         }
     }
     public void UpdateDisplay()
     {
-        for (int i = 0; i < inventory.Container.Count; i++)
+        for (int i = 0; i < inventory.Container.Items.Count; i++)
         {
+            InventorySlot slot = inventory.Container.Items[i];
             //Debug.Log(i);
-            if (itemsDisplayed.ContainsKey(inventory.Container[i]))
+            if (itemsDisplayed.ContainsKey(slot))
             {
-                itemsDisplayed[inventory.Container[i]].GetComponentInChildren<TextMeshProUGUI>().text = inventory.Container[i].amount.ToString("n0");
+                itemsDisplayed[inventory.Container.Items[i]].GetComponentInChildren<TextMeshProUGUI>().text = slot.amount.ToString("n0");
             }
             else
             {
                 var obj = Instantiate(InventoryPrefab, Vector3.zero, Quaternion.identity, transform);
+                obj.transform.GetChild(0).GetComponentInChildren<Image>().sprite = inventory.database.GetItem[slot.item.Id].uiDisplay;
                 obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
-                obj.GetComponentInChildren<TextMeshProUGUI>().text = inventory.Container[i].amount.ToString("n0");
-                itemsDisplayed.Add(inventory.Container[i], obj);
+                obj.GetComponentInChildren<TextMeshProUGUI>().text = slot.amount.ToString("n0");
+                itemsDisplayed.Add(inventory.Container.Items[i], obj);
             }
         }
     }
@@ -60,6 +64,4 @@ public class DisplayInventory : MonoBehaviour
     {
         return new Vector3(X_START + (X_SPACE_BEETWEM_ITEM * (i % NUMBER_OF_COLUMN)), Y_START + ((-Y_SPACE_BEETWEM_ITEM)* (i/NUMBER_OF_COLUMN)),0f);
     }
-
-    */
 }

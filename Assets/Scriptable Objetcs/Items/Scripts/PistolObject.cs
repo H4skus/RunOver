@@ -17,6 +17,6 @@ public class PistolObject : ItemObject
     }
     public void Awake()
     {
-        type = ItemType.Weapon;
+        type = ItemType.Pistol;
     }
 }

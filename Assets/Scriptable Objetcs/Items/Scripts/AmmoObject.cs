@@ -9,7 +9,7 @@ public class AmmoObject : ItemObject
     public float Amount = 6;
     public void Awake()
     {
-        type = ItemType.Ammo;
-        subType = ItemSubType.PistolAmmo;
+        type = ItemType.PistolAmmo;
+        //subType = ItemSubType.PistolAmmo;
     }
 }

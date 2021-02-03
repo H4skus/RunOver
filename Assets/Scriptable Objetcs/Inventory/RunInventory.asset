@@ -13,13 +13,6 @@ MonoBehaviour:
   m_Name: RunInventory
   m_EditorClassIdentifier: 
   savePath: 
+  database: {fileID: 11400000, guid: 6d647e502f7a5504c8ea3ab0b2f54182, type: 2}
   Container:
-  - ID: 2
-    item: {fileID: 11400000, guid: feac302c2e416b84c86a7cad13b4fd51, type: 2}
-    amount: 0
-  - ID: 0
-    item: {fileID: 11400000, guid: 919c067f9589cc748901da497ace26ef, type: 2}
-    amount: 1
-  - ID: 2
-    item: {fileID: 11400000, guid: feac302c2e416b84c86a7cad13b4fd51, type: 2}
-    amount: 2
+    Items: []
