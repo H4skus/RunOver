@@ -15,7 +15,7 @@ public class Save : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "player")
+        if (other.tag == "Player")
         {
 
             Debug.Log(timeToEscape);
@@ -31,16 +31,17 @@ public class Save : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "player")
+        if (other.tag == "Player")
             timeToEscape = 0;
     }
     public void GoOut()
     {
-        for (int i = 0; i < RunInventory.Container.Count; i++)
+        for (int i = 0; i < RunInventory.Container.Items.Count; i++)
         {
-            PlayerInvetnroy.AddItem(RunInventory.Container[i].item, RunInventory.Container[i].amount);
+            PlayerInvetnroy.AddItem(RunInventory.Container.Items[i].item, RunInventory.Container.Items[i].amount);
         }
-        RunInventory.Container.Clear();
+        PlayerInvetnroy.Save();
+        RunInventory.Container.Items.Clear();
         SceneManager.LoadScene(0);
     }
 }
