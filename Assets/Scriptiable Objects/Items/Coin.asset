@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30049ad74c6bbdd45b9cdfb60b45d027, type: 3}
+  m_Name: Coin
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1825138707039879429, guid: 04cf7f951bbabf748ab92b99a3d95585, type: 3}
+  type: 0
+  description: It's a coin what you can find in everywhere, and you can buy for some
+    good items with these
