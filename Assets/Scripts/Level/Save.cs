@@ -15,10 +15,8 @@ public class Save : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "player")
+        if (other.tag == "Player")
         {
-
-            Debug.Log(timeToEscape);
             if (dur <= timeToEscape)
             {
                 GoOut();

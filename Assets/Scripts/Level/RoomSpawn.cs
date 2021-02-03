@@ -52,7 +52,7 @@ public class RoomSpawn : MonoBehaviour
             finishPos += 30;
         }
         finishPos += 30;
-        pos = new Vector3(0 + finishPos, 0.5f, 0);
+        pos = new Vector3(0 + finishPos, 0, 0);
         pos = new Vector3(pos.x,pos.y,pos.z);
         Instantiate(Finish, pos, Quaternion.identity);
 
