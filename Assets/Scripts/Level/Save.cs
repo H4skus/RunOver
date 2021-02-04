@@ -36,12 +36,12 @@ public class Save : MonoBehaviour
     }
     public void GoOut()
     {
-        for (int i = 0; i < RunInventory.Container.Items.Count; i++)
+        for (int i = 0; i < RunInventory.Container.Items.Length; i++)
         {
             PlayerInvetnroy.AddItem(RunInventory.Container.Items[i].item, RunInventory.Container.Items[i].amount);
         }
         PlayerInvetnroy.Save();
-        RunInventory.Container.Items.Clear();
+        RunInventory.Container.Items = new InventorySlot[20];
         SceneManager.LoadScene(0);
     }
 }

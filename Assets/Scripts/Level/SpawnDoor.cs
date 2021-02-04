@@ -29,8 +29,6 @@ public class SpawnDoor : MonoBehaviour
                 anim.Play();
                 timer.isStarted = true;
                 isUsed = true;
-                text1.SetActive(false);
-                text2.SetActive(false);
             }
         }
     }

@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaed8e8aa255bb14692f74d00d03c21b, type: 3}
   m_Name: Bandage
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  Id: 1
+  uiDisplay: {fileID: 0}
   type: 2
   description: Its a bandage, when you have low HP good if you hold some from these.
+  DropChance: 5
+  isDropable: 1
   RestoreHealthValue: 25

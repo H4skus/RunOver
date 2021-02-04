@@ -8,7 +8,8 @@ public enum ItemType
     Equipment,
     Heal,
     Pistol,
-    PistolAmmo
+    PistolAmmo,
+    Weapon
 }
 
 public enum ItemSubType
@@ -20,8 +21,10 @@ public abstract class ItemObject : ScriptableObject
     public int Id;
     public Sprite uiDisplay;
     public ItemType type;
-    [TextArea(15,20)]
+    [TextArea(15, 20)]
     public string description;
+    public int DropChance;
+    public bool isDropable;
 }
 [System.Serializable]
 public class Item

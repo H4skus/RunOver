@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New PistolAmo Object", menuName = "Inventory System/Items/PistolAmo")]
-public class PistolAmmoObject : ItemObject
+public class AmmoObject : ItemObject
 {
 
     public float Amount = 6;

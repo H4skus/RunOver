@@ -9,12 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e321ab87b71f634fb3c5b6ef4da278b, type: 3}
-  m_Name: Coin
+  m_Script: {fileID: 11500000, guid: c57b40fb10fb92247adc1e9e527c8192, type: 3}
+  m_Name: TestPistol
   m_EditorClassIdentifier: 
-  Id: 0
-  uiDisplay: {fileID: 21300000, guid: fefabf67b4b0a6249ae6d28b25424c89, type: 3}
-  type: 0
+  Id: 3
+  uiDisplay: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  type: 3
   description: 
-  DropChance: 100
+  DropChance: 1
   isDropable: 1
+  ammoType: 4
+  Damage: 20
+  NextAttack: 0.5
+  MagazineSize: 6
+  ReserveAmmo: 6

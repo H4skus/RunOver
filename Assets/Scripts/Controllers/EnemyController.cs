@@ -8,8 +8,10 @@ public class EnemyController : MonoBehaviour
     public NavMeshAgent agent;
     public Transform target;
     public LayerMask whatIsGround, whatIsPlayer;
-    //public EnemyStat stats;
-    //public int health;
+    public EnemyStat stats;
+    public int health;
+    public DropableObject dropable;
+    public bool isDie;
 
     //Patrolling
     public Vector3 walkPoint;
@@ -28,8 +30,9 @@ public class EnemyController : MonoBehaviour
     {
         target = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
-        //health = stats.health;
+        health = stats.health;
         //player = GameObject.Find("Player").GetComponent<PlayerStats>();
+        dropable = GameObject.Find("GameMaster").GetComponent<DropableObject>();
     }
     public void Update()
     {
@@ -40,6 +43,8 @@ public class EnemyController : MonoBehaviour
         if (!playerInSightRange && !playerInAttackRange) Patrolling();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
+
+        Die();
     }
 
     private void Patrolling()
@@ -103,5 +108,14 @@ public class EnemyController : MonoBehaviour
         Gizmos.DrawSphere(transform.position, attackRange);
         Gizmos.color = Color.yellow;
         Gizmos.DrawSphere(transform.position, sightRange);
+    }
+
+    public void Die()
+    {
+        if (isDie)
+        {
+            Instantiate(dropable.DropFromEnemy(Random.Range(1, 101)), transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
 }
