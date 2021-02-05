@@ -11,11 +11,6 @@ public enum ItemType
     PistolAmmo,
     Weapon
 }
-
-public enum ItemSubType
-{
-    PistolAmmo
-}
 public abstract class ItemObject : ScriptableObject
 {
     public int Id;
@@ -31,6 +26,12 @@ public class Item
 {
     public string Name;
     public int Id;
+
+    public Item()
+    {
+        Name = "";
+        Id = -1;
+    }
     public Item(ItemObject item)
     {
         Name = item.name;

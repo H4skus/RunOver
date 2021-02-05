@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
+    public MouseItem MouseItem = new MouseItem();
+
     public int health;
     public EnemyStat stats;
 

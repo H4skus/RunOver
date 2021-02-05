@@ -128,11 +128,3 @@ public class DisplayInventory : MonoBehaviour
         return new Vector3(X_START + (X_SPACE_BEETWEM_ITEM * (i % NUMBER_OF_COLUMN)), Y_START + ((-Y_SPACE_BEETWEM_ITEM)* (i/NUMBER_OF_COLUMN)),0f);
     }
 }
-
-public class MouseItem
-{
-    public GameObject obj;
-    public GameObject hoverObj;
-    public InventorySlot item;
-    public InventorySlot hoverItem;
-}
