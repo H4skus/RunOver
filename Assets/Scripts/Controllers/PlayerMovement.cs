@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
+    public GameObject player;
+    bool isChurch = false;
     
     public float movementSpeed = 12f;
     public float gravity = -9.81f;
@@ -21,6 +23,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            Church();
+        }
+
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
@@ -43,5 +50,19 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+    private void Church()
+    {
+        if (!isChurch)
+        {
+            player.transform.localScale = new Vector3(1, .5f, 1);
+            isChurch = true;
+        }
+        else
+        {
+            player.transform.localPosition += new Vector3(0, 1, 0);
+            player.transform.localScale = new Vector3(1, 1f, 1);
+            isChurch = false;
+        }
     }
 }

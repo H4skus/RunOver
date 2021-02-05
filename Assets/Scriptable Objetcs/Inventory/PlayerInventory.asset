@@ -12,157 +12,147 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72516f0b8204b2c4f90fd4d4dfd77676, type: 3}
   m_Name: PlayerInventory
   m_EditorClassIdentifier: 
-  savePath: /Inventory.save
+  savePath: 
   database: {fileID: 11400000, guid: 6d647e502f7a5504c8ea3ab0b2f54182, type: 2}
   Container:
     Items:
-    - ID: -1
+    - AllowedItems: 
+      parent: {fileID: 0}
+      ID: -1
       item:
         Name: 
-        Id: 0
+        Id: -1
       amount: 0
-    - ID: -1
+    - AllowedItems: 
+      parent: {fileID: 0}
+      ID: -1
       item:
         Name: 
-        Id: 0
+        Id: -1
       amount: 0
-    - ID: -1
+    - AllowedItems: 
+      parent: {fileID: 0}
+      ID: -1
       item:
         Name: 
-        Id: 0
+        Id: -1
       amount: 0
-    - ID: -1
+    - AllowedItems: 
+      parent: {fileID: 0}
+      ID: -1
       item:
         Name: 
-        Id: 0
+        Id: -1
       amount: 0
-    - ID: -1
+    - AllowedItems: 
+      parent: {fileID: 0}
+      ID: -1
       item:
         Name: 
-        Id: 0
+        Id: -1
       amount: 0
-    - ID: -1
+    - AllowedItems: 
+      parent: {fileID: 0}
+      ID: -1
       item:
         Name: 
-        Id: 0
+        Id: -1
       amount: 0
-    - ID: -1
+    - AllowedItems: 
+      parent: {fileID: 0}
+      ID: -1
       item:
         Name: 
-        Id: 0
+        Id: -1
       amount: 0
-    - ID: -1
+    - AllowedItems: 
+      parent: {fileID: 0}
+      ID: -1
       item:
         Name: 
-        Id: 0
+        Id: -1
       amount: 0
-    - ID: -1
+    - AllowedItems: 
+      parent: {fileID: 0}
+      ID: -1
       item:
         Name: 
-        Id: 0
+        Id: -1
       amount: 0
-    - ID: -1
+    - AllowedItems: 
+      parent: {fileID: 0}
+      ID: -1
       item:
         Name: 
-        Id: 0
+        Id: -1
       amount: 0
-    - ID: -1
+    - AllowedItems: 
+      parent: {fileID: 0}
+      ID: -1
       item:
         Name: 
-        Id: 0
+        Id: -1
       amount: 0
-    - ID: -1
+    - AllowedItems: 
+      parent: {fileID: 0}
+      ID: -1
       item:
         Name: 
-        Id: 0
+        Id: -1
       amount: 0
-    - ID: -1
+    - AllowedItems: 
+      parent: {fileID: 0}
+      ID: -1
       item:
         Name: 
-        Id: 0
+        Id: -1
       amount: 0
-    - ID: -1
+    - AllowedItems: 
+      parent: {fileID: 0}
+      ID: -1
       item:
         Name: 
-        Id: 0
+        Id: -1
       amount: 0
-    - ID: -1
+    - AllowedItems: 
+      parent: {fileID: 0}
+      ID: -1
       item:
         Name: 
-        Id: 0
+        Id: -1
       amount: 0
-    - ID: -1
+    - AllowedItems: 
+      parent: {fileID: 0}
+      ID: -1
       item:
         Name: 
-        Id: 0
+        Id: -1
       amount: 0
-    - ID: -1
+    - AllowedItems: 
+      parent: {fileID: 0}
+      ID: -1
       item:
         Name: 
-        Id: 0
+        Id: -1
       amount: 0
-    - ID: -1
+    - AllowedItems: 
+      parent: {fileID: 0}
+      ID: -1
       item:
         Name: 
-        Id: 0
+        Id: -1
       amount: 0
-    - ID: -1
+    - AllowedItems: 
+      parent: {fileID: 0}
+      ID: -1
       item:
         Name: 
-        Id: 0
+        Id: -1
       amount: 0
-    - ID: -1
+    - AllowedItems: 
+      parent: {fileID: 0}
+      ID: -1
       item:
         Name: 
-        Id: 0
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
+        Id: -1
       amount: 0

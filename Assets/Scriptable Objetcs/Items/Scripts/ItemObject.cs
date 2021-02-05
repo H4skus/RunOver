@@ -9,6 +9,7 @@ public enum ItemType
     Heal,
     Pistol,
     PistolAmmo,
+    Knife,
     Weapon
 }
 public abstract class ItemObject : ScriptableObject

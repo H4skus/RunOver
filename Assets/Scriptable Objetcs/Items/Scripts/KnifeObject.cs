@@ -5,12 +5,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Knife Object", menuName = "Inventory System/Items/Knife")]
 public class KnifeObject : ItemObject
 {
-    /*
+    
     public int damage;
-    public float distance;
     public void Awake()
     {
         type = ItemType.Knife;
     }
-    */
 }
