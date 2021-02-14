@@ -6,16 +6,16 @@ public class PlayerStats : MonoBehaviour
 {
     public MouseItem MouseItem = new MouseItem();
 
-    public int health;
+    //public int health;
     public EnemyStat stats;
 
     private void Start()
     {
-        health = stats.health;
+        //health = stats.health;
     }
     public void TakeDamage(int amount)
     {
-        health -= amount;
+        stats.health -= amount;
     }
 
     public InventoryObject inventory;

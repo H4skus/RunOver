@@ -4,25 +4,27 @@ using UnityEngine;
 
 public class ShowInventory : MonoBehaviour
 {
-    public GameObject UI;
+    public GameObject Inventory;
     public bool isOpen;
     public MouseLook look;
+    public GameObject Equipment;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab) && !isOpen)
         {
-            UI.SetActive(true);
+            Inventory.SetActive(true);
+            Equipment.SetActive(true);
             isOpen = true;
             Cursor.lockState = CursorLockMode.None;
             look.enabled = false;
         }
         else if (Input.GetKeyDown(KeyCode.Tab) && isOpen)
         {
-            UI.SetActive(false);
+            Inventory.SetActive(false);
+            Equipment.SetActive(false);
             isOpen = false;
             Cursor.lockState = CursorLockMode.Locked;
             look.enabled = true;
         }
     }
-
 }

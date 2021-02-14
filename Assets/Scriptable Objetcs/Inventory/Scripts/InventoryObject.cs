@@ -18,6 +18,11 @@ public class InventoryObject : ScriptableObject
         {
             if (Container.Items[i].ID == _item.Id)
             {
+                if (Container.Items[i].type == ItemType.Pistol)
+                {
+                    SetEmptySlot(_item, _amount);
+                    return;
+                }
                 Container.Items[i].AddAmount(_amount);
                 return;
             }
@@ -53,7 +58,7 @@ public class InventoryObject : ScriptableObject
         {
             if (Container.Items[i].item == _item)
             {
-                Container.Items[i].UpdateSlot(-1, null, 0);
+                Container.Items[i].UpdateSlot(-1, new Item(), 0);
             }
         }
     }
@@ -63,36 +68,38 @@ public class InventoryObject : ScriptableObject
     public void Save()
     {
         //Old one, its works good, but can overwrite so easly, sooo...
-        /*
+
         string saveData = JsonUtility.ToJson(this, true);
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(string.Concat(Application.persistentDataPath, savePath));
         bf.Serialize(file, saveData);
         file.Close();
-        */
-        IFormatter formatter = new BinaryFormatter();
-        Stream stream = new FileStream(string.Concat(Application.persistentDataPath, savePath), FileMode.Create, FileAccess.Write);
-        formatter.Serialize(stream, Container);
-        stream.Close();
+
+        //FileStream file = File.Create($"Application.persistentDataPath, {savePath}");
+
+        //IFormatter formatter = new BinaryFormatter();
+        //Stream stream = new FileStream(string.Concat(Application.persistentDataPath, savePath), FileMode.Create, FileAccess.Write);
+        //formatter.Serialize(stream, Container);
+        //stream.Close();
+
     }
     [ContextMenu("Load")]
     public void Load()
     {
         if (File.Exists(string.Concat(Application.persistentDataPath, savePath)))
         {//Same..
-         //    BinaryFormatter bf = new BinaryFormatter();
-         //    FileStream file = File.Open(string.Concat(Application.persistentDataPath, savePath), FileMode.Open);
-         //    JsonUtility.FromJsonOverwrite(bf.Deserialize(file).ToString(), this);
-         //    file.Close();
-            IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream(string.Concat(Application.persistentDataPath, savePath), FileMode.Open, FileAccess.Read);
-            Inventory newContainer = (Inventory)formatter.Deserialize(stream);
-            for (int i = 0; i < Container.Items.Length; i++)
-            {
-                Container.Items[i].UpdateSlot(newContainer.Items[i].ID, newContainer.Items[i].item, newContainer.Items[i].amount);
-            }
-            stream.Close();
-
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(string.Concat(Application.persistentDataPath, savePath), FileMode.Open);
+            JsonUtility.FromJsonOverwrite(bf.Deserialize(file).ToString(), this);
+            file.Close();
+            //IFormatter formatter = new BinaryFormatter();
+            //Stream stream = new FileStream(string.Concat(Application.persistentDataPath, savePath), FileMode.Open, FileAccess.Read);
+            //Inventory newContainer = (Inventory)formatter.Deserialize(stream);
+            //for (int i = 0; i < Container.Items.Length; i++)
+            //{
+            //    Container.Items[i].UpdateSlot(newContainer.Items[i].ID, newContainer.Items[i].item, newContainer.Items[i].amount);
+            //}
+            //stream.Close();
         }
     }
     [ContextMenu("Clear")]
@@ -117,28 +124,36 @@ public class Inventory
 [System.Serializable]
 public class InventorySlot
 {
+    public InventoryObject Inventory;
     public ItemType[] AllowedItems = new ItemType[0];
     public UserInterface parent;
     public int ID;
     public Item item;
     public int amount;
+    public GameObject prefab;
+    public ItemType type;
     public InventorySlot()
     {
         ID = -1;
         item = null;
         amount = 0  ;
+        prefab = null;
     }
     public InventorySlot(int _id, Item _item, int _amount)
     {
-            ID = _id;
-            item = _item;
-            amount = _amount;
+        ID = _id;
+        item = _item;
+        amount = _amount;
+        prefab = _item.prefab;
+        type = _item.itemType;
     }
     public void UpdateSlot(int _id, Item _item, int _amount)
     {
-            ID = _id;
-            item = _item;
-            amount = _amount;
+        ID = _id;
+        item = _item;
+        amount = _amount;
+        prefab = _item.prefab;
+        type = _item.itemType;
     }
     public void AddAmount(int value)
     {
@@ -146,7 +161,14 @@ public class InventorySlot
     }
     public void DeleteAmount(int value)
     {
+        if (amount <= 0 )
+        {
+            Inventory.RemoveItem(item);
+        }
+        else
+        {
             amount -= value;
+        }
     }
     public bool CanPlaceInSlot(ItemObject _item)
     {

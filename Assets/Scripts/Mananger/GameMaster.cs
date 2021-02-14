@@ -17,7 +17,7 @@ public class GameMaster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerStats.health <= 0)
+        if (playerStats.stats.health <= 0)
         {
             Restart();
         }
@@ -32,7 +32,7 @@ public class GameMaster : MonoBehaviour
     }
     public void PlayerGetDmg(int amount)
     {
-        playerStats.health -= amount;
+        //playerStats.health -= amount;
     }
     public void Restart()
     {

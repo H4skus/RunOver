@@ -12,28 +12,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72516f0b8204b2c4f90fd4d4dfd77676, type: 3}
   m_Name: Player Equipment
   m_EditorClassIdentifier: 
-  savePath: 
+  savePath: /Equipment.Save
   database: {fileID: 11400000, guid: 6d647e502f7a5504c8ea3ab0b2f54182, type: 2}
   Container:
     Items:
-    - AllowedItems: 03000000
+    - Inventory: {fileID: 0}
+      AllowedItems: 03000000
       parent: {fileID: 0}
-      ID: 3
+      ID: -1
       item:
-        Name: TestPistol
-        Id: 3
-      amount: 1
-    - AllowedItems: 03000000
+        Name: 
+        Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
+      amount: 0
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 03000000
       parent: {fileID: 0}
-      ID: 0
+      ID: -1
       item:
-        Name: Coin
-        Id: 0
-      amount: 1
-    - AllowedItems: 03000000
+        Name: 
+        Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
+      amount: 0
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 03000000
       parent: {fileID: 0}
-      ID: 2
+      ID: -1
       item:
-        Name: PistolAmmo
-        Id: 2
-      amount: 1
+        Name: 
+        Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
+      amount: 0
+      prefab: {fileID: 0}
+      type: 0

@@ -16,143 +16,243 @@ MonoBehaviour:
   database: {fileID: 11400000, guid: 6d647e502f7a5504c8ea3ab0b2f54182, type: 2}
   Container:
     Items:
-    - AllowedItems: 
+    - Inventory: {fileID: 11400000}
+      AllowedItems: 
+      parent: {fileID: 0}
+      ID: 3
+      item:
+        Name: TestPistol
+        Id: 3
+        prefab: {fileID: 6200125178102981259, guid: 0eb02f2871a30df42bc498295c953968, type: 3}
+        itemType: 3
+      amount: 1
+      prefab: {fileID: 6200125178102981259, guid: 0eb02f2871a30df42bc498295c953968, type: 3}
+      type: 3
+    - Inventory: {fileID: 11400000}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: 0
       item:
         Name: Coin
         Id: 0
-      amount: 2
-    - AllowedItems: 
+        prefab: {fileID: 3729227210249709931, guid: 2d3a8b008d9564c4b8734be6dd729d17, type: 3}
+        itemType: 0
+      amount: 51
+      prefab: {fileID: 3729227210249709931, guid: 2d3a8b008d9564c4b8734be6dd729d17, type: 3}
+      type: 0
+    - Inventory: {fileID: 11400000}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: 2
       item:
         Name: PistolAmmo
         Id: 2
-      amount: 2
-    - AllowedItems: 
+        prefab: {fileID: 919132149155446097, guid: 92bc62a786ca9824da2a7fb35b089cd4, type: 3}
+        itemType: 4
+      amount: 9993
+      prefab: {fileID: 919132149155446097, guid: 92bc62a786ca9824da2a7fb35b089cd4, type: 3}
+      type: 4
+    - Inventory: {fileID: 0}
+      AllowedItems: 
+      parent: {fileID: 0}
+      ID: 3
+      item:
+        Name: TestPistol
+        Id: 3
+        prefab: {fileID: 6200125178102981259, guid: 0eb02f2871a30df42bc498295c953968, type: 3}
+        itemType: 3
+      amount: 1
+      prefab: {fileID: 6200125178102981259, guid: 0eb02f2871a30df42bc498295c953968, type: 3}
+      type: 3
+    - Inventory: {fileID: 0}
+      AllowedItems: 
+      parent: {fileID: 0}
+      ID: 3
+      item:
+        Name: TestPistol
+        Id: 3
+        prefab: {fileID: 6200125178102981259, guid: 0eb02f2871a30df42bc498295c953968, type: 3}
+        itemType: 3
+      amount: 1
+      prefab: {fileID: 6200125178102981259, guid: 0eb02f2871a30df42bc498295c953968, type: 3}
+      type: 3
+    - Inventory: {fileID: 0}
+      AllowedItems: 
+      parent: {fileID: 0}
+      ID: 3
+      item:
+        Name: TestPistol
+        Id: 3
+        prefab: {fileID: 6200125178102981259, guid: 0eb02f2871a30df42bc498295c953968, type: 3}
+        itemType: 3
+      amount: 1
+      prefab: {fileID: 6200125178102981259, guid: 0eb02f2871a30df42bc498295c953968, type: 3}
+      type: 3
+    - Inventory: {fileID: 0}
+      AllowedItems: 
+      parent: {fileID: 0}
+      ID: 3
+      item:
+        Name: TestPistol
+        Id: 3
+        prefab: {fileID: 6200125178102981259, guid: 0eb02f2871a30df42bc498295c953968, type: 3}
+        itemType: 3
+      amount: 1
+      prefab: {fileID: 6200125178102981259, guid: 0eb02f2871a30df42bc498295c953968, type: 3}
+      type: 3
+    - Inventory: {fileID: 0}
+      AllowedItems: 
+      parent: {fileID: 0}
+      ID: 3
+      item:
+        Name: TestPistol
+        Id: 3
+        prefab: {fileID: 6200125178102981259, guid: 0eb02f2871a30df42bc498295c953968, type: 3}
+        itemType: 3
+      amount: 1
+      prefab: {fileID: 6200125178102981259, guid: 0eb02f2871a30df42bc498295c953968, type: 3}
+      type: 3
+    - Inventory: {fileID: 0}
+      AllowedItems: 
+      parent: {fileID: 0}
+      ID: 3
+      item:
+        Name: TestPistol
+        Id: 3
+        prefab: {fileID: 6200125178102981259, guid: 0eb02f2871a30df42bc498295c953968, type: 3}
+        itemType: 3
+      amount: 1
+      prefab: {fileID: 6200125178102981259, guid: 0eb02f2871a30df42bc498295c953968, type: 3}
+      type: 3
+    - Inventory: {fileID: 0}
+      AllowedItems: 
+      parent: {fileID: 0}
+      ID: 3
+      item:
+        Name: TestPistol
+        Id: 3
+        prefab: {fileID: 6200125178102981259, guid: 0eb02f2871a30df42bc498295c953968, type: 3}
+        itemType: 3
+      amount: 1
+      prefab: {fileID: 6200125178102981259, guid: 0eb02f2871a30df42bc498295c953968, type: 3}
+      type: 3
+    - Inventory: {fileID: 0}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: -1
       item:
         Name: 
         Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
       amount: 0
-    - AllowedItems: 
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: -1
       item:
         Name: 
         Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
       amount: 0
-    - AllowedItems: 
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: -1
       item:
         Name: 
         Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
       amount: 0
-    - AllowedItems: 
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: -1
       item:
         Name: 
         Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
       amount: 0
-    - AllowedItems: 
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: -1
       item:
         Name: 
         Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
       amount: 0
-    - AllowedItems: 
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: -1
       item:
         Name: 
         Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
       amount: 0
-    - AllowedItems: 
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: -1
       item:
         Name: 
         Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
       amount: 0
-    - AllowedItems: 
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: -1
       item:
         Name: 
         Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
       amount: 0
-    - AllowedItems: 
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: -1
       item:
         Name: 
         Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
       amount: 0
-    - AllowedItems: 
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: -1
       item:
         Name: 
         Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
       amount: 0
-    - AllowedItems: 
-      parent: {fileID: 0}
-      ID: -1
-      item:
-        Name: 
-        Id: -1
-      amount: 0
-    - AllowedItems: 
-      parent: {fileID: 0}
-      ID: -1
-      item:
-        Name: 
-        Id: -1
-      amount: 0
-    - AllowedItems: 
-      parent: {fileID: 0}
-      ID: -1
-      item:
-        Name: 
-        Id: -1
-      amount: 0
-    - AllowedItems: 
-      parent: {fileID: 0}
-      ID: -1
-      item:
-        Name: 
-        Id: -1
-      amount: 0
-    - AllowedItems: 
-      parent: {fileID: 0}
-      ID: -1
-      item:
-        Name: 
-        Id: -1
-      amount: 0
-    - AllowedItems: 
-      parent: {fileID: 0}
-      ID: -1
-      item:
-        Name: 
-        Id: -1
-      amount: 0
-    - AllowedItems: 
-      parent: {fileID: 0}
-      ID: -1
-      item:
-        Name: 
-        Id: -1
-      amount: 0
-    - AllowedItems: 
-      parent: {fileID: 0}
-      ID: -1
-      item:
-        Name: 
-        Id: -1
-      amount: 0
+      prefab: {fileID: 0}
+      type: 0

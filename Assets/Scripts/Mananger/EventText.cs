@@ -7,9 +7,12 @@ public class EventText : MonoBehaviour
 {
     public Text Writetext;
     public Text TimerText;
+    public Text Magazine;
+    public Text Reserve;
     // Start is called before the first frame update
     void Start()
     {
+
     }
 
     // Update is called once per frame
@@ -31,5 +34,14 @@ public class EventText : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         Writetext.text = "";
+    }
+
+    public void MagazineSize(int number)
+    {
+        Magazine.text = number.ToString();
+    }
+    public void ReserveAmmo(int number)
+    {
+        Reserve.text = number.ToString() ;
     }
 }

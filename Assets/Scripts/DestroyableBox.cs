@@ -6,6 +6,7 @@ public class DestroyableBox : MonoBehaviour
 {
     public GameObject coin;
     public int health = 40;
+
     public void TakeDamage(int amount)
     {
         health -= amount;

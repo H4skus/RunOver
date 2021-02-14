@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: PistolAmmo
   m_EditorClassIdentifier: 
   Id: 2
-  uiDisplay: {fileID: 21300000, guid: fefabf67b4b0a6249ae6d28b25424c89, type: 3}
+  uiDisplay: {fileID: 21300000, guid: ac4348eea8372dc4987e8a0f03e1567b, type: 3}
   type: 4
   description: 
   DropChance: 10
   isDropable: 1
+  prefab: {fileID: 8195665791952642609, guid: 3a39fbae7eaa85f4c87e35ff6512ce1c, type: 3}
   Amount: 6

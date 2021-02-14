@@ -12,147 +12,247 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72516f0b8204b2c4f90fd4d4dfd77676, type: 3}
   m_Name: PlayerInventory
   m_EditorClassIdentifier: 
-  savePath: 
+  savePath: /Player.save
   database: {fileID: 11400000, guid: 6d647e502f7a5504c8ea3ab0b2f54182, type: 2}
   Container:
     Items:
-    - AllowedItems: 
+    - Inventory: {fileID: 0}
+      AllowedItems: 
+      parent: {fileID: 0}
+      ID: 0
+      item:
+        Name: Coin
+        Id: 0
+        prefab: {fileID: 0}
+        itemType: 0
+      amount: 17
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 
+      parent: {fileID: 0}
+      ID: 0
+      item:
+        Name: 
+        Id: 0
+        prefab: {fileID: 0}
+        itemType: 0
+      amount: 100
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 
+      parent: {fileID: 0}
+      ID: 3
+      item:
+        Name: TestPistol
+        Id: 3
+        prefab: {fileID: 0}
+        itemType: 3
+      amount: 1
+      prefab: {fileID: 0}
+      type: 3
+    - Inventory: {fileID: 0}
+      AllowedItems: 
+      parent: {fileID: 0}
+      ID: 2
+      item:
+        Name: PistolAmmo
+        Id: 2
+        prefab: {fileID: 5659382918960734722, guid: 8cd3dd8a40dc2054ba9c9b719a803680, type: 3}
+        itemType: 4
+      amount: 0
+      prefab: {fileID: 5659382918960734722, guid: 8cd3dd8a40dc2054ba9c9b719a803680, type: 3}
+      type: 4
+    - Inventory: {fileID: 0}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: -1
       item:
         Name: 
         Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
       amount: 0
-    - AllowedItems: 
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: -1
       item:
         Name: 
         Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
       amount: 0
-    - AllowedItems: 
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: -1
       item:
         Name: 
         Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
       amount: 0
-    - AllowedItems: 
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: -1
       item:
         Name: 
         Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
       amount: 0
-    - AllowedItems: 
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: -1
       item:
         Name: 
         Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
       amount: 0
-    - AllowedItems: 
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: -1
       item:
         Name: 
         Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
       amount: 0
-    - AllowedItems: 
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: -1
       item:
         Name: 
         Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
       amount: 0
-    - AllowedItems: 
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: -1
       item:
         Name: 
         Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
       amount: 0
-    - AllowedItems: 
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: -1
       item:
         Name: 
         Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
       amount: 0
-    - AllowedItems: 
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: -1
       item:
         Name: 
         Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
       amount: 0
-    - AllowedItems: 
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: -1
       item:
         Name: 
         Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
       amount: 0
-    - AllowedItems: 
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: -1
       item:
         Name: 
         Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
       amount: 0
-    - AllowedItems: 
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: -1
       item:
         Name: 
         Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
       amount: 0
-    - AllowedItems: 
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: -1
       item:
         Name: 
         Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
       amount: 0
-    - AllowedItems: 
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: -1
       item:
         Name: 
         Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
       amount: 0
-    - AllowedItems: 
+      prefab: {fileID: 0}
+      type: 0
+    - Inventory: {fileID: 0}
+      AllowedItems: 
       parent: {fileID: 0}
       ID: -1
       item:
         Name: 
         Id: -1
+        prefab: {fileID: 0}
+        itemType: 0
       amount: 0
-    - AllowedItems: 
-      parent: {fileID: 0}
-      ID: -1
-      item:
-        Name: 
-        Id: -1
-      amount: 0
-    - AllowedItems: 
-      parent: {fileID: 0}
-      ID: -1
-      item:
-        Name: 
-        Id: -1
-      amount: 0
-    - AllowedItems: 
-      parent: {fileID: 0}
-      ID: -1
-      item:
-        Name: 
-        Id: -1
-      amount: 0
-    - AllowedItems: 
-      parent: {fileID: 0}
-      ID: -1
-      item:
-        Name: 
-        Id: -1
-      amount: 0
+      prefab: {fileID: 0}
+      type: 0

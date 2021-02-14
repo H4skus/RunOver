@@ -5,47 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class MenuMananger : MonoBehaviour
 {
-    public GameObject MenuButtons;
-    public InventoryObject Inventory;
-    public GameObject LookInventory;
     public Animation Menu;
-    public Animation Inventory_anim;
-    public GameObject MenuMain;
-    public GameObject InventoryMenu;
+    public InventoryObject Player_Inventory;
+    public InventoryObject Run_Inventory;
 
     private void Start()
     {
         Cursor.lockState = CursorLockMode.None;
-        Inventory.Load();
+        Player_Inventory.Load();
     }
 
     public void ShowInventory()
     {
-        Menu.Play("MainMenu");
-        Inventory_anim.Play("MainMenu_Inventory");
-        StartCoroutine(MenuOut());
+        Menu.Play("Inventory");
+    }
+    public void UnShowInventory()
+    {
+        Menu.Play("Inventory_reverse");
     }
 
-    IEnumerator MenuOut()
-    {
-        yield return new WaitForSeconds(0.4f);
-        MenuMain.SetActive(false);
-        InventoryMenu.SetActive(true);
-    }
-    IEnumerator MenuIn()
-    {
-        yield return new WaitForSeconds(0.4f);
-        MenuMain.SetActive(true);
-        InventoryMenu.SetActive(true);
-    }
-    public void UnShowInvetory()
-    {
-        Menu.Play("MainMenuReverse");
-        Inventory_anim.Play("MainMenu_InventoryReverse");
-        StartCoroutine(MenuIn());
-    }
+
     public void StartRun()
     {
-        SceneManager.LoadScene(1);
+        Player_Inventory.Save();
+        SceneManager.LoadScene(2);
     }
 }

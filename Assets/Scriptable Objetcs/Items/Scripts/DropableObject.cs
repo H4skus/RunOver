@@ -5,7 +5,6 @@ using UnityEngine;
 public class DropableObject : MonoBehaviour
 {
     public List<ItemObject> items = new List<ItemObject>();
-    public List<GameObject> Dropable = new List<GameObject>();
     private void Start()
     {
 
@@ -17,7 +16,7 @@ public class DropableObject : MonoBehaviour
         {
             if (chance<= items[i].DropChance && items[i].isDropable)
             {
-                inChance.Add(Dropable[i]);
+                inChance.Add(items[i].prefab);
             }
         }
         return inChance[Random.Range(0,inChance.Count)];

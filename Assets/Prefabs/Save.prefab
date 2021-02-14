@@ -110,3 +110,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RunInventory: {fileID: 11400000, guid: 1a2ba7d17d966ea40a09d77aa27114c4, type: 2}
   PlayerInvetnroy: {fileID: 11400000, guid: 9ff6fced0f3b19b4aa1ecc185d1156ef, type: 2}
+  EquipmentInventory: {fileID: 11400000, guid: a02d6812466a7eb4db689510f06f37c7, type: 2}

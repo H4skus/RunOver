@@ -6,6 +6,7 @@ using UnityEngine.Events;
 using TMPro;
 using UnityEngine.UI;
 
+[System.Serializable]
 public abstract class UserInterface : MonoBehaviour
 {
     public PlayerStats player;

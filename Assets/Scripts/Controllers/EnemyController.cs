@@ -12,6 +12,8 @@ public class EnemyController : MonoBehaviour
     public int health;
     public DropableObject dropable;
     public bool isDie;
+    public ParticleSystem dieEffect;
+    public int Damage = 10;
 
     //Patrolling
     public Vector3 walkPoint;
@@ -81,11 +83,21 @@ public class EnemyController : MonoBehaviour
 
         transform.LookAt(target);
 
-        if (!alreadyAttacked)
-        {
+            if (!alreadyAttacked)
+            {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, attackRange))
+            {
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+                Debug.Log(hit.transform.tag);
+                if (hit.transform.tag == "Player")
+                {
+                    hit.transform.gameObject.GetComponent<PlayerStats>().TakeDamage(Damage);
+                }
 
-            alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBeetweenAttacks);
+                alreadyAttacked = true;
+                Invoke(nameof(ResetAttack), timeBeetweenAttacks);
+            }
         }
     }
     private void ResetAttack()
@@ -95,8 +107,12 @@ public class EnemyController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        //health -= damage;
-        //if (health <= 0) Invoke(nameof(DestroyEnemy), .5f);
+        health -= damage;
+        if (health <= 0)
+        {
+            isDie = true;
+            Die();
+        }
     }
     private void DestroyEnemy()
     {
@@ -114,6 +130,7 @@ public class EnemyController : MonoBehaviour
     {
         if (isDie)
         {
+            Instantiate(dieEffect, transform.position, Quaternion.identity);
             Instantiate(dropable.DropFromEnemy(Random.Range(1, 101)), transform.position, Quaternion.identity);
             Destroy(gameObject);
         }

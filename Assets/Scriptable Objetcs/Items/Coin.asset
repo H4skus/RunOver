@@ -18,3 +18,4 @@ MonoBehaviour:
   description: 
   DropChance: 100
   isDropable: 1
+  prefab: {fileID: 3729227210249709931, guid: 2d3a8b008d9564c4b8734be6dd729d17, type: 3}

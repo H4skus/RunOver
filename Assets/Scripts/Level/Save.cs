@@ -9,6 +9,7 @@ public class Save : MonoBehaviour
     float dur = 10f;
     public InventoryObject RunInventory;
     public InventoryObject PlayerInvetnroy;
+    public InventoryObject EquipmentInventory;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +42,8 @@ public class Save : MonoBehaviour
             PlayerInvetnroy.AddItem(RunInventory.Container.Items[i].item, RunInventory.Container.Items[i].amount);
         }
         PlayerInvetnroy.Save();
+        EquipmentInventory.Save();
         RunInventory.Container.Items = new InventorySlot[20];
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("MainMenu");
     }
 }
